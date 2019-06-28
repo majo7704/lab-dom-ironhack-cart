@@ -2,10 +2,11 @@ body {
   margin-left: 10%;
 }
 
-.h1Container div{
+.h1Container h1{
   display: flex;
   justify-content: center;
 }
+
 .ultimate-container {
   display: flex;
   flex-direction: column;
@@ -76,13 +77,14 @@ input {
   padding-right: 5%; 
   
 }
-.calculate-container button {
+.calculate-container  {
   display: flex;
   justify-content: center;
   align-items: center;
   align-content: center;
+  
 }
-.unit-container {
-  display: flex;
+.unit-box {
+  
   width:10%;
 }
