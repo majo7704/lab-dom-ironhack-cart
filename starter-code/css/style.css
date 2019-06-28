@@ -1,5 +1,19 @@
+body {
+  margin-left: 10%;
+}
+
+.h1Container div{
+  display: flex;
+  justify-content: center;
+}
+.ultimate-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
 input {
   border: solid 1px black;
+  
 }
 
 .btn {
@@ -38,4 +52,37 @@ input {
 
 .quantity {
   margin: 0 5px;
+}
+.product-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  justify-items: center;
+  width: 95%;
+}
+.product-title {
+  font-weight: bold;
+  width: 15%;
+}
+
+.total-price {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.total-price span {
+  padding-right: 5%; 
+  
+}
+.calculate-container button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+.unit-container {
+  display: flex;
+  width:10%;
 }
