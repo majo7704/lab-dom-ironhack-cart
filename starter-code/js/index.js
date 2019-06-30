@@ -142,13 +142,12 @@ function displayNewElements (row) {
   let nameDisplay = document.createElement('span');
   nameDisplay.className = 'product-title';
   nameDisplay.textContent = row.name;
-  let priceDiv = document.createElement('div');
-  priceDiv.appendChild(nameDisplay);
-  priceDiv.appendChild(priceDisplay);
+  
 
   let displayRow = document.createElement('div');
   displayRow.className = 'product-row'
-  displayRow.appendChild(priceDiv);
+  displayRow.appendChild(nameDisplay);
+  displayRow.appendChild(priceDisplay);
   displayRow.appendChild(quantityDiv);
   displayRow.appendChild(subtotalDiv);
   displayRow.appendChild(buttonDiv);

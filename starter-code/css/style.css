@@ -63,22 +63,28 @@ label {
 .product-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-  align-items:center;
-  align-content: space-around;
+  justify-content: space-around;
+  align-items: center;
   justify-items: center;
-  width: 90%;
+  width: 95%;
   padding: 1%;
-  
 }
 .product-title {
   font-weight: bold;
-  width: 50%;
-  margin-right: 50%;
-  padding-right: 10%;
-
+  width: 15%;
+  margin-right: 10%;
 }
 
+.subtotal-price {
+  display: inline-flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.subtotal-price span {
+  padding-right: 5%; 
+  
+}
 .calculate-container  {
   display: flex;
   justify-content: center;
