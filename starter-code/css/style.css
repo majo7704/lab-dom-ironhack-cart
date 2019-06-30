@@ -52,7 +52,11 @@ label {
     background-color: #CF000F;
     border-color: #CF000F;
 }
-
+.btn-create {
+  color:#fff;
+  background-color:blueviolet;
+  border-color: blueviolet;
+}
 .quantity {
   margin: 0;
 }
@@ -60,26 +64,21 @@ label {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  align-items: center;
+  align-items:center;
+  align-content: space-around;
   justify-items: center;
-  width: 95%;
+  width: 90%;
   padding: 1%;
+  
 }
 .product-title {
   font-weight: bold;
-  width: 15%;
+  width: 50%;
+  margin-right: 50%;
+  padding-right: 10%;
+
 }
 
-.subtotal-price {
-  display: inline-flex;
-  flex-direction: row;
-  align-items: center;
-  justify-items: center;
-}
-.subtotal-price span {
-  padding-right: 5%; 
-  
-}
 .calculate-container  {
   display: flex;
   justify-content: center;
