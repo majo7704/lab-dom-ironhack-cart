@@ -11,80 +11,67 @@
 </head>
 <body>
   <div class="h1Container">
-  <h1>Ironhack Merchandising Shop</h1>
+    <h1>Ironhack Merchandising Shop</h1>
   </div>
   <div class="ultimate-container">
-    <div class="product-box">
+    <div class="product-row">
       <span class="product-title">IronBubble-head</span>
-        <span class="unit-box">$25.00</span>
+      <span class="unit-box">$25.00</span>
       <div class="input-container">
         <label>QTY</label>
-        <input type="number" class="quantity">
+        <input type="number" class="quantity" value="2">
       </div>
-      <div class="total-price">
-        <p>$</p>
-        <span class="subtotal">0.00</span>
-      </div>
+        <span class="subtotal">$0.00</span>
       <div>
-        <button class="btn btn-delete">DELETE</button>
+        <button type="button" class="btn btn-delete">DELETE</button>
       </div>
-  </div>
-  <div class="product-box">
-    <span class="product-title">IronShirt</span>
+    </div>
+    <div class="product-row">
+      <span class="product-title">IronShirt</span>
       <span class="unit-box">$15.00</span>
-    <div>
-      <label>QTY</label>
-      <input type="text" class="quantity">
-    </div>
-    <div class="total-price">
-      <p>$</p>
-      <span class="subtotal">0.00</span>
-    </div>
+      <div class="input-container">
+        <label>QTY</label>
+        <input type="number" class="quantity" value="0" placeholder="0">
+      </div>
+      <span class="subtotal">$0.00</span>
     <div>
       <button class="btn btn-delete">DELETE</button>
     </div>
   </div>
-  <div class="product-box">
+  <div class="product-row">
     <span class="product-title">IronCup</span>
-      <span class="unit-box">$10.00</span>
-    <div>
+    <span class="unit-box">$10.00</span>
+    <div class="input-container">
       <label>QTY</label>
-      <input type="text" class="quantity">
+      <input type="number" class="quantity" value="0">
     </div>
-    <div class="total-price">
-      <p>$</p>
-      <span class="subtotal">0.00</span>
-    </div>
+    
+      <span class="subtotal">$0.00</span>
+   
     <div>
       <button class="btn btn-delete">DELETE</button>
     </div>
   </div>
-  <div class="product-box">
+  <div class="product-row">
     <span class="product-title">IronSticker</span>
       <span class="unit-box">$1.00</span>
-    <div>
+    <div class="input-container">
       <label>QTY</label>
-      <input type="text" class="quantity">
+      <input type="number" class="quantity" value="0">
     </div>
-    <div class="total-price">
-      <p>$</p>
-      <span class="subtotal">0.00</span>
-    </div>
+      <span class="subtotal">$0.00</span>
     <div>
       <button class="btn btn-delete">DELETE</button>
     </div>
   </div>
-  <div class="product-box">
-    <span class="product-title">IronAxe</span>
+  <div class="product-row">
+      <span class="product-title">IronAxe</span>
       <span class="unit-box">$100.00</span>
     <div>
       <label>QTY</label>
-      <input type="number" class="quantity">
+      <input type="number" class="quantity" value="2">
     </div>
-    <div class="total-price">
-      <p>$</p>
-      <span class="subtotal">0.00</span>
-    </div>
+      <span class="subtotal">$0.00</span>
     <div>
       <button class="btn btn-delete">DELETE</button>
     </div>
@@ -92,6 +79,9 @@
   </div>
   <div class="calculate-container">
   <button id="calc-prices-button" class="btn btn-success ">Calculate Prices</button>
+  </div>
+  <div class= "price">
+    <h2>Total Prices: <span>$0</span></h2>
   </div>
   
 </body>
