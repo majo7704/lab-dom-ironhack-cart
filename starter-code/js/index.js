@@ -159,20 +159,11 @@ function displayNewElements (row) {
   nameDisplay.className = 'product-title';
   nameDisplay.textContent = row.name;
   
-  //let priceInputDisplay = document.createElement('input');
-  //priceInputDisplay.Id = 'input-price';
-  //priceInputDisplay.textContent = priceInputDisplay.value;
-
-  //let nameInputDisplay = document.createElement('input');
-  //nameInputDisplay.Id = 'input-name';
-  //nameInputDisplay.textContent = nameInputDisplay.value;
 
   let displayRow = document.createElement('div');
   displayRow.className = 'product-row'
   displayRow.appendChild(nameDisplay);
-  //displayRow.appendChild(nameInputDisplay)
   displayRow.appendChild(priceDisplay);
-  ////displayRow.appendChild(priceInputDisplay);
   displayRow.appendChild(quantityDiv);
   displayRow.appendChild(subtotalDiv);
   displayRow.appendChild(buttonDiv);
