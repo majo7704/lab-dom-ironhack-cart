@@ -22,7 +22,17 @@ updatePriceButton.addEventListener("click", updateSubtotalPrice)
 updatePriceButton.addEventListener("click", calculatePrices)
 
 let createButton = document.getElementsByClassName('btn-create')[0]
-createButton.addEventListener('click', displayNewElements)
+  createButton.addEventListener('click', getValuesMakeRowAndThenDisplayNewItems)
+}
+
+function getValuesMakeRowAndThenDisplayNewItems() {
+  //select, get values, make new row, call displayNewElements(the row you just made)
+  let valueIneed = document.getElementById("input-name").value;
+  let priceIneed = document.getElementById("input-price").value;
+  let priceBox = parseFloat(priceIneed)
+  let newRow = new Row(valueIneed, priceBox, 2, 0.00, "button")
+
+  displayNewElements(newRow)
 }
 
 //FUNCTIONS
@@ -45,31 +55,36 @@ function quantityChanged (event) {
 function updateSubtotalPrice (){
   let productsContainers = document.getElementsByClassName('ultimate-container')[0]
   let productRows = productsContainers.getElementsByClassName('product-row')
-  let subtotalPrice = 0
+
+
   for (let i = 0; i < productRows.length; i ++) {
+
+    let subtotalPrice = 0
     let productRow = productRows[i]
     let priceElement = productRow.getElementsByClassName('unit-box')[0]
     let priceOfItem = parseFloat(priceElement.innerText.replace('$', ''))
-    let quantity = productRow.getElementsByClassName('quantity')[0]  
+    let quantity = productRow.getElementsByClassName('quantity')[0] 
     let inputValue = quantity.value
     let subtotal = document.getElementsByClassName('subtotal')[0].innerText.replace('$', '')
-    
+      
     subtotalPrice = parseInt(priceOfItem * inputValue)
-    
+    subtotalPrice = Math.round(subtotalPrice)
+    productRow.getElementsByClassName('subtotal')[0].innerText = '$' + subtotalPrice;
+
   }
-  subtotalPrice = Math.round(subtotalPrice)
-document.getElementsByClassName('subtotal')[0].innerText = '$' + subtotalPrice;
 
   }
 
   function calculatePrices () {
     let productsContainers = document.getElementsByClassName('ultimate-container')[0]
     let productRows = productsContainers.getElementsByClassName('product-row')
+    let totalPrice = 0
     for (let i = 0; i < productRows.length; i++) {
       let productRow = productRows[i]
-      let subtotal = productRow.getElementsByClassName('subtotal')[0].innerText.replace('$', '')
-      
-  }
+      totalPrice += parseInt(productRow.getElementsByClassName('subtotal')[0].innerText.replace('$', ''))
+    }
+    document.getElementsByClassName('price')[0].innerText = '$' + totalPrice
+
 }
 
 //creating an element
@@ -102,7 +117,7 @@ let arrayOfRows = [
   new Row('IronSticker', "1.00", 2, 0.00, "button"),
   new Row('IronAxe', "10.00", 1, 0.00, "button"),
   new Row('IronPen', "15.00", 1, 0.00, "button"),
-  new Row('IronMug', "30.00", 2, 0.00, "button")
+  new Row('IronMug', "30.00", 2, 0.00, "button"),
 ]
 function RowList (rows) {
   this.allRows = rows;
@@ -136,6 +151,7 @@ function displayNewElements (row) {
   quantityDiv.appendChild(displayLabel);
   quantityDiv.appendChild(dispalyQuantity);
 
+  
   let priceDisplay = document.createElement('span');
   priceDisplay.className = 'unit-box';
   priceDisplay.textContent = '$' + row.price;
@@ -143,11 +159,20 @@ function displayNewElements (row) {
   nameDisplay.className = 'product-title';
   nameDisplay.textContent = row.name;
   
+  //let priceInputDisplay = document.createElement('input');
+  //priceInputDisplay.Id = 'input-price';
+  //priceInputDisplay.textContent = priceInputDisplay.value;
+
+  //let nameInputDisplay = document.createElement('input');
+  //nameInputDisplay.Id = 'input-name';
+  //nameInputDisplay.textContent = nameInputDisplay.value;
 
   let displayRow = document.createElement('div');
   displayRow.className = 'product-row'
   displayRow.appendChild(nameDisplay);
+  //displayRow.appendChild(nameInputDisplay)
   displayRow.appendChild(priceDisplay);
+  ////displayRow.appendChild(priceInputDisplay);
   displayRow.appendChild(quantityDiv);
   displayRow.appendChild(subtotalDiv);
   displayRow.appendChild(buttonDiv);

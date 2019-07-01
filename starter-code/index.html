@@ -14,7 +14,19 @@
     <h1>Ironhack Merchandising Shop</h1>
   </div>
   <div class="ultimate-container">
-    
+    <div class="product-row">
+      <span class="product-title">IronPhoneCase</span>
+      <span class="unit-box">$35.00</span>
+      <div class="input-container">
+        <label>QTY</label>
+        <input type="number" class="quantity" value="2">
+      </div>
+      <span class="subtotal">$0.00</span>
+      <div>
+        <button type="button" class="btn btn-delete">DELETE</button>
+      </div>
+    </div>
+
   </div>
   <div class="calculate-container">
   <button id="calc-prices-button" class="btn btn-success ">Calculate Prices</button>
@@ -22,8 +34,8 @@
   <div class= "price">
     <h2 id="total-price">Total Prices: <span>$0</span></h2>
   </div>
-  <input type="text">
-  <input type="text">  
+  <input type="text" id="input-name">
+  <input type="text" id="input-price">  
   <button class="btn btn-create">Create</button>
 </body>
 </html>
