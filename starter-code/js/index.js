@@ -84,7 +84,6 @@ function updateSubtotalPrice (){
       totalPrice += parseInt(productRow.getElementsByClassName('subtotal')[0].innerText.replace('$', ''))
     }
     document.getElementsByClassName('price')[0].innerText = '$' + totalPrice
-
 }
 
 //creating an element
